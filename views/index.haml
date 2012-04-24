@@ -1,0 +1,9 @@
+%form.add{:action => "/add", :method => "POST"}
+  %input{:type=>"text", :id=>"text", :name=>"text", :autofocus=>"true"}
+
+%ul
+  - for entry in @entries
+    %li.entry
+      %a{:href=> "/delete/#{entry._id}"}
+        X
+      = entry.text
